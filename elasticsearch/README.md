@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7.5.2`](https://github.com/docker-library/elasticsearch/blob/84437b816ee67bfdc10bd826dc21f0dbaf4db3d9/7/Dockerfile)
--	[`6.8.6`](https://github.com/docker-library/elasticsearch/blob/4c04ee848e9183d70c6109e9325d6a40520d334d/6/Dockerfile)
+**WARNING:** THIS IMAGE *IS NOT SUPPORTED* ON THE `s390x` ARCHITECTURE
+
+[![s390x/elasticsearch build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/s390x/job/elasticsearch.svg?label=s390x/elasticsearch%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/elasticsearch/)
 
 # Quick reference
 
