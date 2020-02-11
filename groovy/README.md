@@ -16,18 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.5.9-jdk8`, `2.5-jdk8`, `2.5.9-jdk`, `2.5-jdk`, `jdk8`, `jdk`](https://github.com/groovy/docker-groovy/blob/5f8bf8d0d5321a3f6c39ff6883aa7c99c22ec0d9/jdk8/Dockerfile)
--	[`2.5.9-jre8`, `2.5-jre8`, `2.5.9-jre`, `2.5-jre`, `2.5.9`, `2.5`, `jre8`, `jre`, `latest`](https://github.com/groovy/docker-groovy/blob/5f8bf8d0d5321a3f6c39ff6883aa7c99c22ec0d9/jre8/Dockerfile)
--	[`2.5.9-jdk11`, `2.5-jdk11`, `jdk11`](https://github.com/groovy/docker-groovy/blob/5f8bf8d0d5321a3f6c39ff6883aa7c99c22ec0d9/jdk11/Dockerfile)
--	[`2.5.9-jre11`, `2.5-jre11`, `jre11`](https://github.com/groovy/docker-groovy/blob/5f8bf8d0d5321a3f6c39ff6883aa7c99c22ec0d9/jre11/Dockerfile)
--	[`2.5.9-jdk13`, `2.5-jdk13`, `jdk13`](https://github.com/groovy/docker-groovy/blob/5f8bf8d0d5321a3f6c39ff6883aa7c99c22ec0d9/jdk13/Dockerfile)
--	[`2.5.9-jre13`, `2.5-jre13`, `jre13`](https://github.com/groovy/docker-groovy/blob/5f8bf8d0d5321a3f6c39ff6883aa7c99c22ec0d9/jre13/Dockerfile)
--	[`3.0.0-rc-3-jdk8`, `3.0-jdk8`, `3.0.0-rc-3-jdk`, `3.0-jdk`](https://github.com/groovy/docker-groovy/blob/203edc26572375538a9bfcc2cf78a16617c68524/jdk8/Dockerfile)
--	[`3.0.0-rc-3-jre8`, `3.0-jre8`, `3.0.0-rc-3-jre`, `3.0-jre`, `3.0.0-rc-3`, `3.0`](https://github.com/groovy/docker-groovy/blob/203edc26572375538a9bfcc2cf78a16617c68524/jre8/Dockerfile)
--	[`3.0.0-rc-3-jdk11`, `3.0-jdk11`](https://github.com/groovy/docker-groovy/blob/203edc26572375538a9bfcc2cf78a16617c68524/jdk11/Dockerfile)
--	[`3.0.0-rc-3-jre11`, `3.0-jre11`](https://github.com/groovy/docker-groovy/blob/203edc26572375538a9bfcc2cf78a16617c68524/jre11/Dockerfile)
--	[`3.0.0-rc-3-jdk13`, `3.0-jdk13`](https://github.com/groovy/docker-groovy/blob/203edc26572375538a9bfcc2cf78a16617c68524/jdk13/Dockerfile)
--	[`3.0.0-rc-3-jre13`, `3.0-jre13`](https://github.com/groovy/docker-groovy/blob/203edc26572375538a9bfcc2cf78a16617c68524/jre13/Dockerfile)
+**WARNING:** THIS IMAGE *IS NOT SUPPORTED* ON THE `arm32v5` ARCHITECTURE
+
+[![arm32v5/groovy build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm32v5/job/groovy.svg?label=arm32v5/groovy%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v5/job/groovy/)
 
 # Quick reference
 
@@ -70,7 +61,7 @@ Note that if you are mounting a volume and the uid running Docker is not `1000`,
 
 ## Running a Groovy script
 
-`docker run --rm -v "$PWD":/home/groovy/scripts -w /home/groovy/scripts groovy groovy <script> <script-args>`
+`docker run --rm -v "$PWD":/home/groovy/scripts -w /home/groovy/scripts arm32v5/groovy groovy <script> <script-args>`
 
 ## Reusing the Grapes cache
 
@@ -78,7 +69,7 @@ The local Grapes cache can be reused across containers by creating a volume and 
 
 ```console
 docker volume create --name grapes-cache
-docker run --rm -it -v grapes-cache:/home/groovy/.groovy/grapes groovy
+docker run --rm -it -v grapes-cache:/home/groovy/.groovy/grapes arm32v5/groovy
 ```
 
 # License
